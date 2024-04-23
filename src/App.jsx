@@ -1,15 +1,19 @@
 import React from "react";
-import Home from "./pages/Dashboard";
 import { Route, Routes } from "react-router-dom";
-import CreateNew from "./pages/Create";
-import NewTasks from "./pages/NewTasks";
-import InProgress from "./pages/InProgress";
-import Completed from "./pages/Completed";
+import MobileNav from "./components/MobileNav";
+import SideBar from "./components/SideBar";
 import Canceled from "./pages/Canceled";
+import Completed from "./pages/Completed";
+import CreateNew from "./pages/Create";
+import Home from "./pages/Dashboard";
+import InProgress from "./pages/InProgress";
+import NewTasks from "./pages/NewTasks";
 
 const App = () => {
   return (
-    <div>
+    <main className="root">
+      <MobileNav />
+      <SideBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/createnew" element={<CreateNew />} />
@@ -18,7 +22,7 @@ const App = () => {
         <Route path="completed" element={<Completed />} />
         <Route path="canceled" element={<Canceled />} />
       </Routes>
-    </div>
+    </main>
   );
 };
 
