@@ -5,6 +5,7 @@ import { GrTasks } from "react-icons/gr";
 import { RxCross1 } from "react-icons/rx";
 import NavLink from "./NavLink";
 import ThemeToggler from "./ThemeToggler";
+import Nav from "./Nav";
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,24 +17,11 @@ const MobileNav = () => {
 
   return (
     <div className="md:hidden overflow-hidden">
-      <nav className="h-12 flex shadow-2xl">
-        <div className="container mx-auto flex items-center justify-between ">
-          <div
-            className="text-primary"
-            onClick={() => setIsOpen((prv) => !prv)}
-          >
-            <GrTasks size={24} />
-          </div>
-          <div className="flex items-center gap-2 text-primary">
-            <User size={20} />
-            <ThemeToggler />
-          </div>
-        </div>
-      </nav>
+      <Nav setIsOpen={setIsOpen} />
 
       <div
-        className={`w-1/2 bg-gray-400 fixed top-12 z-50 left-0 flex flex-col pl-4 gap-8 h-screen transform transition-all ease-in-out duration-200${
-          isOpen ? "translate-x-0" : "translate-x-full"
+        className={`w-1/2 bg-gray-400 fixed top-0 flex flex-col pl-4 gap-8 h-screen transition-transform ease-in-out duration-300 ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="mt-4">
