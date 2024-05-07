@@ -33,14 +33,14 @@ const NavLink = ({ isOpen, setIsOpen }) => {
     <>
       {sideBarData.map((item, index) => (
         <div
-          className="flex items-center gap-5"
+          className="flex items-center gap-5 dark:text-secondary-foreground bg-primary font-normal"
           key={index}
           onClick={() => {
             setIsOpen(false);
           }}
         >
           <div className="">{item.icon}</div>
-          <div className="">{item.name}</div>
+          <div className="dark:text-foreground font-semibold">{item.name}</div>
         </div>
       ))}
     </>

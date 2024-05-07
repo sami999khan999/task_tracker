@@ -32,12 +32,9 @@ const sideBarData = [
 
 const SideBar = () => {
   return (
-    <aside className="bg-blue-200 shadow-2xl w-1/2 h-screen  md:w-1/6 transition-all hidden md:block">
-      <div className="pl-4 flex  flex-col gap-8 mt-4">
-        <div className="flex items-center gap-2">
-          <FaTasks />
-          <p>TastTracker</p>
-        </div>
+    <aside className="bg-white dark:bg-black shadow-lg w-1/2 h-screen  md:w-1/6 transition-all hidden md:block dark:border-r dark:border-secondary">
+      <div className="flex  flex-col gap-8">
+        <div className="flex items-center gap-2"></div>
         <div className="flex flex-col gap-6">
           <NavLink />
         </div>
